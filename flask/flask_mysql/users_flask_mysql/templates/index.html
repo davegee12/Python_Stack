@@ -19,16 +19,20 @@
             <li class="list-group-item col"><b>ID</b></li>
             <li class="list-group-item col"><b>Full Name</b></li>
             <li class="list-group-item col"><b>Email</b></li>
+            <li class="list-group-item col"><b>Occupation</b></li>
             <li class="list-group-item col"><b>Created_at</b></li>
-            <li class="list-group-item col"><b>Activity</b></li>
+            <li class="list-group-item col"><b>Actions</b></li>
+            <li class="list-group-item col"><b>Description</b></li>
         </ul>
         {% for one_friend in all_friends %}
         <ul class="list-group list-group-horizontal">
             <li class="list-group-item col">{{one_friend["id"]}}</li>
             <li class="list-group-item col">{{one_friend["first_name"]}} {{one_friend["last_name"]}}</li>
             <li class="list-group-item col">{{one_friend["email"]}}</li>
+            <li class="list-group-item col">{{one_friend["occupation"]}}</li>
             <li class="list-group-item col">{{one_friend["created_at"]}}</li>
-            <li class="list-group-item col"><a href="/users/{{one_friend.id}}" >Show</a> | <a href="/users/{{one.friend.id}}/edit">Edit</a> | Delete</li>
+            <li class="list-group-item col"><a href="/users/{{one_friend.id}}" >Show</a> | <a href="/users/{{one_friend.id}}/edit">Edit</a> | <a href="/users/{{one_friend.id}}/delete">Delete</a></li>
+            <li class="list-group-item col">{{one_friend["description"]}}</li>
             <hr>
         </ul>
         {% endfor %}

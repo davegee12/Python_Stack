@@ -10,11 +10,14 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>User 4</h1>
+    <h1>User {{new_user[0]['id']}}</h1>
     <a href="/users">Home</a>
-    <p>Full Name: {{new_user[0]['first_name']}} {{new_user[0]['last_name']}}</p>
+    <p>Full Name: {{ new_user[0]['first_name'] }} {{new_user[0]['last_name']}}</p>
     <p>Email: {{new_user[0]['email']}}</p>
+    <p>Occupation: {{new_user[0]['occupation']}}</p>
     <p>Created On: {{new_user[0]['created_at']}}</p>
     <p>Last Updated On: {{new_user[0]['updated_at']}}</p>
+    <p>Description: {{new_user[0]['description']}}</p>
+    <p><a href="/users/{{new_user[0]['id']}}/edit">Edit</a> | <a href="/users/{{new_user[0]['id']}}/delete">Delete</a></p>
 </body>
 </html>
