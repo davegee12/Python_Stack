@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>New User</title>
+</head>
+
+<body>
+    <div id="wrapper">
+        <h1>Edit User</h1>
+        <a href="/users">Home</a>
+        <form action="/edit" method="POST">
+            <p>First Name: <input type="text" name="fname" placeholder="{{new_user[0]['first_name']}} {{new_user[0]['last_name']}}"></p>
+            <p>Last Name: <input type="text" name="lname"></p>
+            <p>Email: <input type="text" name="email"></p>
+            <p>Occupation: <input type="text" name="occ"></p>
+            <input type="submit" value="Submit Edits">
+        </form>
+    </div>
+</body>
+
+</html>

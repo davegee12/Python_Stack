@@ -1,0 +1,14 @@
+* {
+    box-sizing: border-box;
+    vertical-align: top;
+}
+
+#wrapper {
+    background-color: black;
+    width: 975px;
+}
+
+#wrapper .container{
+    width: 100%;
+    background-color: yellow;
+}

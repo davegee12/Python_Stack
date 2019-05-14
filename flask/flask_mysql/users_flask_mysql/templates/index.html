@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>User Table</title>
+</head>
+
+<body>
+    <div id="wrapper">
+        <h1>All My Friends</h1>
+
+        <ul class="list-group list-group-horizontal">
+            <li class="list-group-item col"><b>ID</b></li>
+            <li class="list-group-item col"><b>Full Name</b></li>
+            <li class="list-group-item col"><b>Email</b></li>
+            <li class="list-group-item col"><b>Created_at</b></li>
+            <li class="list-group-item col"><b>Activity</b></li>
+        </ul>
+        {% for one_friend in all_friends %}
+        <ul class="list-group list-group-horizontal">
+            <li class="list-group-item col">{{one_friend["id"]}}</li>
+            <li class="list-group-item col">{{one_friend["first_name"]}} {{one_friend["last_name"]}}</li>
+            <li class="list-group-item col">{{one_friend["email"]}}</li>
+            <li class="list-group-item col">{{one_friend["created_at"]}}</li>
+            <li class="list-group-item col"><a href="/users/{{one_friend.id}}" >Show</a> | <a href="/users/{{one.friend.id}}/edit">Edit</a> | Delete</li>
+            <hr>
+        </ul>
+        {% endfor %}
+
+    <a href="/users/new">Add a New User</a>
+
+    </div>
+</body>
+
+</html>

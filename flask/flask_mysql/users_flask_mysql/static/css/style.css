@@ -1,0 +1,13 @@
+*{
+    box-sizing: border-box;
+    vertical-align: top;
+}
+
+#wrapper {
+    width: 100%;
+    margin: 0px;
+}
+
+h1 {
+    text-align: center;
+}

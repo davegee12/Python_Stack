@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+    vertical-align: top;
+}
+
+.cool {
+    width: 100%;
+}
+
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -275px;
+    margin-left: 25px;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    text-align: center;
+}

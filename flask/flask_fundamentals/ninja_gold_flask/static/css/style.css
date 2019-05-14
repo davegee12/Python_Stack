@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+    vertical-align: top;
+}
+
+#berry {
+    border: 1px solid black;
+}
+
+.panny {
+    text-align: right;
+}
+
+.cats {
+    text-align: center;
+}
+
+#location {
+    display: inline-block;
+}
+
+.green {
+    color: green;
+}
+
+.red {
+    color: red;
+}
+
+.peanuts {
+    border: 2px solid black;
+}
+
+.overflow {
+    overflow: auto;
+}
+
+.win {
+    color: gold;
+    background-color: blue;
+}
+
+.lose {
+    color: red;
+    background-color: black;
+}
