@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+    vertical-align: top;
+}
+
+body {
+    background-image: url("../img/ChicagoSkyline.jpg");
+    color: white;
+    text-shadow: 2px 1px black;
+}
+
+#email {
+    width: 90%;
+}
+
+form {
+    width: 90%;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+.red {
+    background-color: red;
+}
+
+.green {
+    background-color: green;
+}
+
