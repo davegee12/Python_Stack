@@ -12,11 +12,21 @@
 </head>
 
 <body>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <p>{{message}}</p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+    {% for all_users in users %}
     <h1>Info Submitted:</h1>
-    <p>Name: {{ name_on_template }}</p>
-    <p>Dojo Location: {{ locations_on_template }}</p>
-    <p>Favorite Language: {{ language_on_template }}</p>
-    <p>Comments: {{ text_on_template }}</p>
+    <p>Name: {{ all_users['first_name'] }} {{ all_users['last_name'] }}</p>
+    <p>Dojo Location: {{ all_users['location'] }}</p>
+    <p>Favorite Language: {{ all_users['favorite_language'] }}</p>
+    <p>Comments: {{ all_users['comments'] }}</p>
+    {% endfor %}
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

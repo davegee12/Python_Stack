@@ -13,38 +13,42 @@
 
 <body id="wrapper">
     <div class="container">
-        <form action='/users' method="POST">
+        {% with messages = get_flashed_messages() %}     
+            {% if messages %}                            
+                {% for message in messages %}            
+                    <p>{{message}}</p>                   
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        <form action='/create' method="POST">
             <div class="form-group row">
                 <label for="inputEmail3" class="col-sm-2 col-form-label">Name</label>
-                <div class="col-sm-10">
-                    <input type="text" name='name' class="form-control" id="inputEmail3" placeholder="Name">
+                <div class="col-sm-4">
+                    <input type="text" name='fname' class="form-control" id="inputEmail3" placeholder="First Name">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-4">
+                    <input type="text" name='lname' class="form-control" id="inputEmail3" placeholder="Last Name">
                 </div>
             </div>
 
-            <label for="locations">Locations</label>
+            <label for="locations">Dojo Locations</label>
             <select class="custom-select" id="locations" name="locations">
-                <option selected>Dojo Location</option>
-                <option value="San Jose">San Jose</option>
-                <option value="Chicago">Chicago</option>
-                <option value="Seattle">Seattle</option>
+                <option value="1">San Jose</option>
+                <option value="2">Chicago</option>
+                <option value="3">Seattle</option>
             </select>
 
-            <div id="lang">
-                <h3>Favorite Languages</h3>
-                <div class="custom-control custom-radio">
-                    <input type="radio" id="customRadio1" name="languages" value="Python" class="custom-control-input">
-                    <label class="custom-control-label" for="customRadio1">Python</label>
-                </div>
-                <div class="custom-control custom-radio">
-                    <input type="radio" id="customRadio2" name="languages" value="Javascript" class="custom-control-input">
-                    <label class="custom-control-label" for="customRadio2">JavaScript</label>
-                </div>
-            </div>
+            <label for="languages">Favorite Language</label>
+            <select class="custom-select" id="locations" name="languages">
+                <option value="1">Python</option>
+                <option value="2">JavaScript</option>
+                <option value="3">C#</option>
+            </select>
 
-            <div class="form-group">
-                <label for="exampleFormControlTextarea1">Comment (optional)</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" name="text" rows="3"></textarea>
-            </div>
+            <p><input type="text" name="com"></p>
 
             <input class="btn btn-primary" type="submit" value="Submit">
 
