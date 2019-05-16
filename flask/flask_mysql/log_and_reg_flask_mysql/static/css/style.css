@@ -1,0 +1,20 @@
+* {
+    box-sizing: border-box;
+    vertical-align: top;
+}
+
+.box1 {
+    display: inline-block;
+}
+
+.box2 {
+    display: inline-block;
+}
+
+.red {
+    background-color: red;
+}
+
+.green {
+    background-color: green;
+}
